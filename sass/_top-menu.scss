@@ -1,0 +1,21 @@
+.top-menu {
+    text-align: right;
+    background-color: $white;
+    border-bottom: 1px solid $grey2;
+    button {
+        display: inline-flex;
+        background-color: $white;
+        border: none;
+        border-left: 1px solid $grey2;
+        padding: 20px 0;
+        .icon {
+            color: $grey1;
+            padding: 0 20px;
+        }
+        .number {
+            font-family: $font;
+            color: $grey1;
+            font-size: 20px;
+        }
+    }
+}

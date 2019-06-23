@@ -1,0 +1,92 @@
+/* color */
+$black: #000000;
+$grey1: #979797;
+$grey2: #bababa;
+$grey3: #e3e3e3;
+$grey4: #f5f5f2;
+$orange: #F58220;
+$yellow: #FFA200;
+$green1: #04AE00;
+$green2: #74B67A;
+$green3: #96CC9B;
+$pink1: #DE5252;
+$pink2: #EC7171;
+$blue: #56819F;
+$red: #FF0000;
+$white: #ffffff;
+
+/* font sizes */
+$sidebar-link: 14px;
+$title: 16px;
+$button-font: 18px;
+
+/* fonts */
+$font: "Roboto", sans-serif;
+
+/* texts */
+h1 {
+    color: $grey1;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: $grey1;
+    font-size: $title;
+    font-weight: 700;
+}
+
+p {
+    color: $black;
+    font-size: $sidebar-link;
+    font-weight: 300;
+}
+
+/* link */
+a {
+    color: $blue;
+    font-size: $title;
+    font-weight: 300;
+    &:hover {
+        color: $yellow;
+        cursor: pointer;
+    }
+}
+
+/* button */
+.btn {
+    border-radius: 3px;
+    color: $white;
+    border: none;
+}
+
+.grey {
+    @extend .btn;
+    background: $grey1;
+    &:hover {
+        background: $grey2;
+        cursor: pointer;
+    }
+}
+
+.orange {
+    @extend .btn;
+    background: $orange;
+    &:hover {
+        background: $yellow;
+        cursor: pointer;
+    }
+}
+
+button[disabled] {
+    width: 203px;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
+    background: $grey3;
+    .icon-links {
+        width: 16px;
+        height: 8px;
+        margin-right: 18px;
+        color: white;
+    }
+}

@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.row:before,
+.row:after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  background-color: #f3f3f0;
+  font-family: $font;
+}
+
+.container {
+    margin: 15px 15px 15px 215px;
+    background-color: $white;
+}
+
+.container-fluid {
+    width: 100%;
+  padding: 15px;
+  }
+
+@for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      $width: 100% / 12 * $i;
+      flex: 0 0 $width;
+      max-width: $width;
+    }
+  }
+
+  [class*="col-"] {
+      float: left;
+      min-height: 1px;
+      width: 100%;
+  }
+
+  @media(max-width: 767px) {
+    @include grid('sm');
+  }
+  
+  @media(min-width: 768px) {
+    @include grid('md');
+  }
+  
+  @media(min-width: 992px) {
+    @include grid('lg');
+  }
+  
+  @media(min-width: 1200px) {
+    @include grid('xl');
+  }

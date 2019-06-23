@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>big-project</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div class="sidebar">
+      <img class="logo_img" src="images/logo.png" alt="logo">
+      <ul>
+        <li><a href="#"><span class="icon-general"></span>General</a></li>
+        <li><a href="#"><span class="icon-details"></span>Details</a></li>
+        <li><a href="#"><span class="icon-links"></span>Links</a></li>
+        <li><a href="#"><span class="icon-banners"></span>Banners</a></li>
+        <li><a href="#"><span class="icon-personaldata"></span>Personal data</a></li>
+        <li><a href="#"><span class="icon-payout"></span>Payout</a></li>          <li><a href="#"><span class="icon-postback"></span>Postback</a></li>
+      </ul>
+    </div>
+    <nav class="top-menu">
+      <button><span class="icon icon-wallet"></span><span class="number"> $1,500.00</span><span class="icon icon-arrow-down"></span></button>
+      <button><span class="icon icon-notification"></span></button>
+      <button><span class="icon icon-profile"></span><a>Leonardo Dicaprio</a></button>
+      <button><span class="icon icon-quit"></span></button>
+    </nav>
+      <div class="container">
+        <div class="general">
+          <div class="title">
+            <h1>general statistic</h1>
+          </div>
+          <div class="calendar">
+            <span>
+              <input class="bday" type="date" name="before-day" value="2016-05-16">
+              <input type="date" name="after-day" value="2016-05-16">
+            <span class="icon-calendar"></span>
+            </span>
+            <button class="orange icon-refresh"></button>
+          </div>
+          <div class="row general-data">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-8 general-data-line">
+                  <h2>Visit Signups</h2>
+                </div>
+                <div class="col-md-1 general-data-line">
+                  <p>124</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8 general-data-line">
+                  <h2>FTD</h2>
+                </div>
+                <div class="col-md-1 general-data-line">
+                  <p>445</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-8 general-data-line">
+                  <h2>Net deposit</h2>
+                </div>
+                <div class="col-md-1 general-data-line">
+                  <p>564</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8 general-data-line">
+                  <h2>Turn over</h2>
+                </div>
+                <div class="col-md-1 general-data-line">
+                  <p>432</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chart">
+            <h2>Earnings chart</h2>
+            <div class="my-chart">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+      <script src="js/script.js"></script>
+    </body>
+</html>

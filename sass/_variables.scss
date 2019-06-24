@@ -41,6 +41,14 @@ p {
     font-weight: 300;
 }
 
+/*title*/
+.title {
+    border-bottom: 1px solid $grey2;
+    h1 {
+        padding: 15px;
+    }
+}
+
 /* link */
 a {
     color: $blue;

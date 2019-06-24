@@ -1,5 +1,10 @@
-.top-menu {
-    text-align: right;
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
     background-color: $white;
     border-bottom: 1px solid $grey2;
     button {

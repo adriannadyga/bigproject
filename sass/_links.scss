@@ -1,0 +1,35 @@
+.links {
+    .center {
+        text-align: center;
+        padding: 40px;
+        .orange {
+            width: 129px;
+            height: 43px;
+        }
+    }
+    .link-area {
+        width: 60%;
+        margin: auto;
+        .link-style {
+            padding: 20px;
+            border-bottom: 1px solid $grey2;
+            &:hover {
+                background-color: $grey3;
+            }
+            &:hover .icon-layer {
+                display: block;
+        }
+        }
+        .link-style-top {
+            @extend .link-style;
+            border-top: 1px solid $grey2;
+        }
+        .icon-layer {
+            display: none;
+            .icon-links {
+                padding-right: 15px;
+                color: $orange;
+            }
+        }
+    }
+}

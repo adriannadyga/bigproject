@@ -1,4 +1,4 @@
-.links {
+.banners {
     .center {
         text-align: center;
         padding: 40px;
@@ -7,10 +7,10 @@
             height: 43px;
         }
     }
-    .link-area {
+    .banner-area {
         width: 60%;
         margin: auto;
-        .link-style {
+        .banner-style {
             padding: 20px;
             border-bottom: 1px solid $grey2;
             &:hover {
@@ -21,8 +21,8 @@
                 display: block;
         }
         }
-        .link-style-top {
-            @extend .link-style;
+        .banner-style-top {
+            @extend .banner-style;
             border-top: 1px solid $grey2;
         }
         .icon-layer {

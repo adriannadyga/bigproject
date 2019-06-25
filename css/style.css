@@ -7,10 +7,16 @@ h1 {
   text-transform: uppercase;
 }
 
-h2 {
+h2, .scroll-wrapper table tr th {
   color: #979797;
   font-size: 16px;
   font-weight: 700;
+}
+
+h4 {
+  color: #56819F;
+  font-size: 14px;
+  padding-right: 5px;
 }
 
 p {
@@ -438,13 +444,16 @@ template {
 }
 
 body {
-  background-color: #f3f3f0;
   font-family: "Roboto", sans-serif;
 }
 
 .container {
-  margin-left: 215px;
-  margin-right: 15px;
+  margin-left: 200px;
+  padding: 15px;
+  background-color: #f4f4f2;
+}
+
+.container .content {
   background-color: #ffffff;
 }
 
@@ -567,6 +576,9 @@ body {
   .col-sm-12 {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  .container {
+    margin-left: 50px;
   }
 }
 
@@ -857,28 +869,42 @@ body {
 .sidebar {
   height: 100%;
   width: 200px;
-  background-color: #000000;
   position: fixed;
+  z-index: 2;
   top: 0;
-  z-index: 1;
+  left: 0;
+  background-color: #000000;
+  padding-top: 15px;
 }
 
-.sidebar ul {
-  list-style-type: none;
+.sidebar .sidebar-menu .logo {
+  display: flex;
+  justify-content: space-around;
 }
 
-.sidebar ul li {
-  margin-left: 20px;
+.sidebar .sidebar-menu .logo .hamburger-btn {
+  color: #ffffff;
+  background: #000000;
+  border: none;
+}
+
+.sidebar .sidebar-menu .menu-bookmarks ul {
+  display: block;
+  padding: 0;
+}
+
+.sidebar .sidebar-menu .menu-bookmarks ul li {
+  display: block;
   padding: 10px 0;
 }
 
-.sidebar ul li:hover {
+.sidebar .sidebar-menu .menu-bookmarks ul li:hover {
   color: #ffffff;
   background: #282828;
   border-left: 4px solid #F58220;
 }
 
-.sidebar ul li a {
+.sidebar .sidebar-menu .menu-bookmarks ul li a {
   text-decoration: none;
   color: #979797;
   font-family: "Roboto", sans-serif;
@@ -886,49 +912,85 @@ body {
   font-weight: 300;
 }
 
-.sidebar ul li a span {
-  padding-right: 15px;
+.sidebar .sidebar-menu .menu-bookmarks ul li a span {
+  margin: 0 15px;
 }
 
-.sidebar .line {
+.sidebar .sidebar-menu .line {
   border-bottom: 1px solid #979797;
   padding-top: 20px;
 }
 
-.sidebar .manager h1 {
+.sidebar .sidebar-menu .manager h1 {
   padding-top: 10px;
   text-align: center;
   font-size: 14px;
 }
 
-.sidebar .manager img {
+.sidebar .sidebar-menu .manager img {
   margin-left: 10px;
   width: 38px;
   height: 40px;
   border-radius: 50%;
 }
 
-.sidebar .manager .left {
+.sidebar .sidebar-menu .manager .left {
   padding-top: 10px;
 }
 
-.sidebar .manager .left h5 {
+.sidebar .sidebar-menu .manager .left h5 {
   text-align: left;
   color: #56819F;
 }
 
-.topbar {
+.sidebar .sidebar-menu .top-menu {
+  display: none;
+}
+
+.sidebar .sidebar-menu .top-menu ul li {
+  display: block;
+  padding: 10px 0;
+}
+
+.sidebar .sidebar-menu .top-menu ul li a {
+  text-decoration: none;
+  color: #979797;
+}
+
+.sidebar .sidebar-menu .top-menu ul li a span {
+  margin-right: 15px;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    left: -150px;
+  }
+  .sidebar .sidebar-menu .menu-bookmarks ul li:hover {
+    color: none;
+    background: none;
+    border-left: none;
+  }
+  .sidebar .sidebar-menu .manager {
+    display: none;
+  }
+  .sidebar .sidebar-menu .top-menu {
+    display: block;
+  }
+}
+
+header {
   display: flex;
   justify-content: flex-end;
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #bababa;
+  z-index: 1;
 }
 
-.topbar button {
+header button {
   display: inline-flex;
   background-color: #ffffff;
   border: none;
@@ -936,70 +998,76 @@ body {
   padding: 20px 0;
 }
 
-.topbar button .icon {
+header button .icon {
   color: #979797;
   padding: 0 20px;
 }
 
-.topbar button .number {
+header button .number {
   font-family: "Roboto", sans-serif;
   color: #979797;
   font-size: 20px;
 }
 
-.container {
+@media (max-width: 767px) {
+  .topbar {
+    display: none;
+  }
+}
+
+.content {
   margin-top: 80px;
 }
 
-.general .calendar {
+.content .calendar {
   padding: 40px;
   text-align: center;
   border-bottom: 1px solid #bababa;
 }
 
-.general .calendar span {
+.content .calendar .calendar-style {
   padding: 10px;
   border: 1px solid #bababa;
   display: inline-block;
 }
 
-.general .calendar span input {
+.content .calendar .calendar-style input {
   border: none;
   padding-left: 5px;
 }
 
-.general .calendar span .bday {
+.content .calendar .calendar-style .bday {
   border-right: 1px solid #bababa;
 }
 
-.general .calendar span .icon-calendar {
+.content .calendar .calendar-style .icon-calendar {
   border: none;
 }
 
-.general .calendar .orange {
-  width: 44px;
-  height: 43px;
-  padding: 15px;
+.content .calendar .orange {
+  width: 45px;
+  height: 45px;
 }
 
-.general .general-data {
+.content .general-data {
   width: 60%;
   margin: auto;
   text-align: left;
 }
 
-.general .general-data .general-data-line {
+.content .general-data .general-data-line {
   padding-top: 40px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #bababa;
 }
 
-.general .chart h2 {
+.content .chart h2, .content .chart .scroll-wrapper table tr th, .scroll-wrapper table tr .content .chart th {
   width: 60%;
   margin: auto;
   padding-top: 70px;
 }
 
-.general .chart .my-chart {
+.content .chart .my-chart {
   width: 80%;
   margin: auto;
 }
@@ -1026,6 +1094,7 @@ body {
 
 .links .link-area .link-style:hover, .links .link-area .link-style-top:hover {
   background-color: #e3e3e3;
+  cursor: pointer;
 }
 
 .links .link-area .link-style:hover .icon-layer, .links .link-area .link-style-top:hover .icon-layer {
@@ -1043,6 +1112,111 @@ body {
 .links .link-area .icon-layer .icon-links {
   padding-right: 15px;
   color: #F58220;
+}
+
+.banners .center {
+  text-align: center;
+  padding: 40px;
+}
+
+.banners .center .orange {
+  width: 129px;
+  height: 43px;
+}
+
+.banners .banner-area {
+  width: 60%;
+  margin: auto;
+}
+
+.banners .banner-area .banner-style, .banners .banner-area .banner-style-top {
+  padding: 20px;
+  border-bottom: 1px solid #bababa;
+}
+
+.banners .banner-area .banner-style:hover, .banners .banner-area .banner-style-top:hover {
+  background-color: #e3e3e3;
+  cursor: pointer;
+}
+
+.banners .banner-area .banner-style:hover .icon-layer, .banners .banner-area .banner-style-top:hover .icon-layer {
+  display: block;
+}
+
+.banners .banner-area .banner-style-top {
+  border-top: 1px solid #bababa;
+}
+
+.banners .banner-area .icon-layer {
+  display: none;
+}
+
+.banners .banner-area .icon-layer .icon-links {
+  padding-right: 15px;
+  color: #F58220;
+}
+
+.scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scroll-wrapper table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  text-align: justify;
+}
+
+.scroll-wrapper table tr {
+  border-bottom: 1px solid #bababa;
+}
+
+.scroll-wrapper table tr th {
+  padding: 20px;
+}
+
+.scroll-wrapper table tr th:hover {
+  background: #e3e3e3;
+  color: #000000;
+  cursor: pointer;
+}
+
+.scroll-wrapper table tr td {
+  padding: 20px;
+}
+
+.scroll-wrapper table .hover:hover {
+  background: #e3e3e3;
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.center .pagination {
+  display: inline-block;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.center .pagination li {
+  display: inline;
+  text-align: center;
+}
+
+.center .pagination li a {
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.center .pagination li a:hover {
+  background-color: #e3e3e3;
+  color: #979797;
 }
 
 /*# sourceMappingURL=style.css.map */

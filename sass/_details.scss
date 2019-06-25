@@ -1,0 +1,54 @@
+.scroll-wrapper {  
+    display: block;
+    width: 100%;
+    overflow-x: auto;  
+    table {
+        width: 100%;
+        max-width: 100%;
+        border-collapse: collapse;
+        text-align: justify;
+        tr {
+            border-bottom: 1px solid $grey2;
+            th {
+                @extend h2;
+                padding: 20px;
+                &:hover {
+                    background: $grey3;
+                    color: $black;
+                    cursor: pointer;
+                }
+            }
+            td {
+                padding: 20px;
+            }
+        }
+        .hover {
+            &:hover {
+                background: $grey3;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.center {
+    display: flex;
+    justify-content: center;
+    .pagination {
+        display: inline-block;
+        padding: 20px 0;
+        margin: 0;
+        li {
+            display: inline;
+            text-align: center;
+            a {
+                float: left;
+                padding: 8px 16px;
+                text-decoration: none;
+                &:hover {
+                    background-color: $grey3;
+                    color: $grey1;
+                }
+            }
+        }
+    }
+}

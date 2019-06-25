@@ -1,12 +1,13 @@
-.topbar {
+header {
     display: flex;
     justify-content: flex-end;
     position: fixed;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     background-color: $white;
     border-bottom: 1px solid $grey2;
+    z-index: 1;
     button {
         display: inline-flex;
         background-color: $white;
@@ -22,5 +23,11 @@
             color: $grey1;
             font-size: 20px;
         }
+    }
+}
+
+@media (max-width: 767px) {
+    .topbar {
+        display: none;
     }
 }

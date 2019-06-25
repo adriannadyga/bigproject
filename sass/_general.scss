@@ -1,12 +1,10 @@
-.container {
+.content {
     margin-top: 80px;
-}
-.general {
     .calendar {
         padding: 40px;
         text-align: center;
         border-bottom: 1px solid $grey2;
-        span {
+        .calendar-style {
             padding: 10px;
             border: 1px solid $grey2;
             display: inline-block;
@@ -22,9 +20,8 @@
             }
         }
         .orange {
-            width: 44px;
-            height: 43px;
-            padding: 15px;
+            width: 45px;
+            height: 45px;
         }    
     } 
     .general-data {
@@ -33,6 +30,7 @@
         text-align: left;
         .general-data-line {
             padding-top: 40px;
+            padding-bottom: 5px;
             border-bottom: 1px solid $grey2;
         }
     }

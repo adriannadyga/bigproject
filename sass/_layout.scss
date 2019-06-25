@@ -17,14 +17,16 @@
 }
 
 body {
-  background-color: #f3f3f0;
   font-family: $font;
 }
 
 .container {
-    margin-left: 215px;
-    margin-right: 15px;
+  margin-left: 200px;
+  padding: 15px;
+  background-color: $grey4;
+  .content {
     background-color: $white;
+  }
 }
 
 .container-fluid {
@@ -48,6 +50,9 @@ body {
 
   @media(max-width: 767px) {
     @include grid('sm');
+    .container {
+      margin-left: 50px;
+    }
   }
   
   @media(min-width: 768px) {

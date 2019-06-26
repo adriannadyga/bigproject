@@ -1,65 +1,10 @@
 'use strict';
 
 //hamburger 
-var toggleMenu = document.getElementByClassName("hamburger-btn");
-
-function toggleMenu(visible) {
-  document.querySelector('.sidebar').classList.toggle('show', visible);
-};
-
-document.querySelector('.hamburger-btn').addEventListener('click', function(e) {
-  e.preventDefault();
-  toggleMenu()
-});
-
-//modal
-
-function closeModal() {
-    document.getElementById('overlay').classList.remove('show');
-};
-
-document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault()
-      closeModal()
-    });
-  });
-
-  document.querySelector('#overlay').addEventListener('click', function(e) {
-    if(e.target === this) {
-      closeModal()
-    };
-  });
-
-  document.addEventListener('keyup', function(e) {
-    if(e.keyCode === 27) {
-      closeModal()
-    };
-  });
-
-  function openModal(modal) {
-    document.querySelectorAll('#overlay > *').forEach(function(modal) {
-      modal.classList.remove('show');
-    });
-    document.querySelector('#overlay').classList.add('show');
-    document.querySelector(modal).classList.add('show');
-  };
-
-  //opening of modals
-//Login
-var btnLoginModal = document.getElementById('userName');
-
-var showLoginModal = function openModal(modal) {
-	console.log(modal);
-  document.querySelectorAll('#overlay > *').forEach(function(modal) {
-    modal.classList.remove('show');
-  });
-  document.querySelector('#overlay').classList.add('show');
-  document.getElementById('loginModal').classList.add('show');
-  
-};
-
-btnLoginModal.addEventListener('click', showLoginModal);
+function myFunction() {
+  var element = document.getElementById("myDIV");
+  element.classList.toggle("show");
+}
 
 // chart
 

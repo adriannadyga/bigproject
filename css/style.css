@@ -962,6 +962,12 @@ body {
 }
 
 @media (max-width: 767px) {
+  .sidebar {
+    left: -150px;
+  }
+  .sidebar .show {
+    left: 0;
+  }
   .sidebar .sidebar-menu .menu-bookmarks ul li:hover {
     color: none;
     background: none;

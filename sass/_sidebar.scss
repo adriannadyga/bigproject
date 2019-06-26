@@ -87,6 +87,10 @@
 
 @media (max-width: 767px) {
     .sidebar {
+        left: -150px;
+        .show {
+            left: 0;
+        }
         .sidebar-menu {
             .menu-bookmarks {
                 ul {

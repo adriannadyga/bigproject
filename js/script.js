@@ -1,6 +1,8 @@
 'use strict';
 
 //hamburger 
+var toggleMenu = document.getElementByClassName("hamburger-btn");
+
 function toggleMenu(visible) {
   document.querySelector('.sidebar').classList.toggle('show', visible);
 };

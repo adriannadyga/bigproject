@@ -7,19 +7,21 @@
       <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-
+    <!--  Topbar -->
     <header>
       <nav class="topbar">
         <div class="row">
-            <button><span class="icon icon-wallet"></span><span class="number"> $1,500.00</span><span class="icon icon-arrow-down"></span></button>
-            <button><span class="icon icon-notification"></span></button>
-            <button><span class="icon icon-profile"></span><h4>Leonardo Dicaprio</h4></button>
-            <button><span class="icon icon-quit"></span></button>
+            <ul>
+              <li><a href="#"><span class="icon-wallet"></span> $1,500.000 <span class="icon-arrow-down"></span></a></li>
+              <li><a href="#"><span class="icon-notification"></span></a></li>
+              <li><a class="userName" id="userName" href="#"><span class="icon-profile btn-enter js--enter-modal"></span>Leonardo Dicaprio</a></li>
+		    	    <li><a href="#" id="quit"><span class="icon-quit btn-close js--quit-modal"></span></a></li>
+            </ul>
         </div>
       </nav>
     </header>
 
-
+    <!--  Sidebar -->
     <div class="sidebar" id="sidebar">
       <nav class="sidebar-menu">
         <div class="logo">
@@ -32,8 +34,9 @@
             <li><a href="details.html"><span class="icon-details"></span>Details</a></li>
             <li><a href="links.html"><span class="icon-links"></span>Links</a></li>
             <li><a href="banners.html"><span class="icon-banners"></span>Banners</a></li>
-            <li><a href="#"><span class="icon-personaldata"></span>Personal data</a></li>
-            <li><a href="payout.html"><span class="icon-payout"></span>Payout</a></li>          <li><a href="#"><span class="icon-postback"></span>Postback</a></li>
+            <li><a href="personaldata.html"><span class="icon-personaldata"></span>Personal data</a></li>
+            <li><a href="payout.html"><span class="icon-payout"></span>Payout</a></li>          
+            <li><a href="#"><span class="icon-postback"></span>Postback</a></li>
           </ul>
         </div>
         <div class="line"></div>
@@ -57,6 +60,16 @@
         </div>
       </nav>
     </div>
+
+    <!--  Modal -->
+    <div class="overlay" id="overlay">
+      <div class="modal" id="myModal">
+        <div class="btn-close js--close-modal">x</div>
+        <p>witaj w modalu</p>
+        <button class="js--close-modal">okay</button>
+      </div>
+    </div>
+
 
     <!--  General statistic -->
     <div class="container">

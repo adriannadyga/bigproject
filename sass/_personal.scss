@@ -1,0 +1,14 @@
+.section {
+    padding: 60px 0;
+    border-bottom: 1px solid $grey2;
+    .style {
+        width: 60%;
+        margin: auto;
+        h2 {
+            padding: 10px 0;
+        }
+        input {
+            padding: 10px 100px 10px 10px;
+        }
+    }
+}

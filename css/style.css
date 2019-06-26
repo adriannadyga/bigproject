@@ -990,29 +990,81 @@ header {
   z-index: 1;
 }
 
-header button {
-  display: inline-flex;
+header .topbar .row {
+  display: flex;
+}
+
+header .topbar .row ul {
+  display: flex;
+  justify-content: flex-end;
   background-color: #ffffff;
-  border: none;
+  list-style-type: none;
+}
+
+header .topbar .row ul li {
+  padding: 20px 15px;
+  color: #bababa;
+  font-size: 15px;
+  text-decoration: none;
   border-left: 1px solid #bababa;
-  padding: 20px 0;
 }
 
-header button .icon {
-  color: #979797;
-  padding: 0 20px;
+header .topbar .row ul li .userName {
+  color: #56819F;
 }
 
-header button .number {
-  font-family: "Roboto", sans-serif;
-  color: #979797;
-  font-size: 20px;
+header .topbar .row ul li a {
+  color: #bababa;
+  text-decoration: none;
 }
 
 @media (max-width: 767px) {
   .topbar {
     display: none;
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 30px;
+  display: none;
+}
+
+.overlay .show {
+  display: flex;
+}
+
+.overlay::webkit-scrollbar {
+  display: none;
+}
+
+.overlay .modal {
+  max-width: 600px;
+  margin: auto;
+  background-color: #ffffff;
+  position: relative;
+  padding: 30px;
+  display: none;
+}
+
+.overlay .modal .show {
+  display: block;
+}
+
+.overlay .modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
 }
 
 .content {
@@ -1070,6 +1122,69 @@ header button .number {
 .content .chart .my-chart {
   width: 80%;
   margin: auto;
+}
+
+.scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scroll-wrapper table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  text-align: justify;
+}
+
+.scroll-wrapper table tr {
+  border-bottom: 1px solid #bababa;
+}
+
+.scroll-wrapper table tr th {
+  padding: 20px;
+}
+
+.scroll-wrapper table tr th:hover {
+  background: #e3e3e3;
+  color: #000000;
+  cursor: pointer;
+}
+
+.scroll-wrapper table tr td {
+  padding: 20px;
+}
+
+.scroll-wrapper table .hover:hover {
+  background: #e3e3e3;
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.center .pagination {
+  display: inline-block;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.center .pagination li {
+  display: inline;
+  text-align: center;
+}
+
+.center .pagination li a {
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.center .pagination li a:hover {
+  background-color: #e3e3e3;
+  color: #979797;
 }
 
 .links .center {
@@ -1156,67 +1271,22 @@ header button .number {
   color: #F58220;
 }
 
-.scroll-wrapper {
-  display: block;
-  width: 100%;
-  overflow-x: auto;
-}
-
-.scroll-wrapper table {
-  width: 100%;
-  max-width: 100%;
-  border-collapse: collapse;
-  text-align: justify;
-}
-
-.scroll-wrapper table tr {
+.section {
+  padding: 60px 0;
   border-bottom: 1px solid #bababa;
 }
 
-.scroll-wrapper table tr th {
-  padding: 20px;
+.section .style {
+  width: 60%;
+  margin: auto;
 }
 
-.scroll-wrapper table tr th:hover {
-  background: #e3e3e3;
-  color: #000000;
-  cursor: pointer;
+.section .style h2, .section .style .scroll-wrapper table tr th, .scroll-wrapper table tr .section .style th {
+  padding: 10px 0;
 }
 
-.scroll-wrapper table tr td {
-  padding: 20px;
-}
-
-.scroll-wrapper table .hover:hover {
-  background: #e3e3e3;
-  cursor: pointer;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-}
-
-.center .pagination {
-  display: inline-block;
-  padding: 20px 0;
-  margin: 0;
-}
-
-.center .pagination li {
-  display: inline;
-  text-align: center;
-}
-
-.center .pagination li a {
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-.center .pagination li a:hover {
-  background-color: #e3e3e3;
-  color: #979797;
+.section .style input {
+  padding: 10px 100px 10px 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -24,6 +24,18 @@
         float: right;
         padding: 10px;
     }
+    .row {
+        padding: 40px 20px;
+        input {
+            width: 100%;
+            padding: 5px 10px;
+        }
+        button {
+            float: right;
+            width: 90%;
+            height: 100%;
+        }
+    }
     &.show {
         display: block;
     }

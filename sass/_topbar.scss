@@ -8,30 +8,31 @@ header {
     background-color: $white;
     border-bottom: 1px solid $grey2;
     z-index: 1;
-    .topbar {
-        .row {
-            display: flex;
-            ul {
-                display: flex;
-                justify-content: flex-end;
-                background-color: $white;
-                list-style-type: none;
-                li {
-                    padding: 20px 15px;
-                    color: $grey2;
-                    font-size: 15px;
-                    text-decoration: none;
-                    border-left: 1px solid $grey2;
-                    .userName {
-                        color: $blue;
-                    }
-                    a {
-                        color: $grey2;
-                        text-decoration: none;
-                    }
-                }
+   .topbar {
+        display: flex;
+        justify-content: flex-end;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: $white;
+        border-bottom: 1px solid $grey2;
+        button {
+            display: inline-flex;
+            background-color: $white;
+            border: none;
+            border-left: 1px solid $grey2;
+            padding: 20px 0;
+            .icon {
+                color: $grey1;
+                padding: 0 20px;
             }
-        }
+            .number {
+                font-family: $font;
+                color: $grey1;
+                font-size: 20px;
+            }
+        }    
     }
 }
 

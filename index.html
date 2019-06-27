@@ -10,14 +10,10 @@
     <!--  Topbar -->
     <header>
       <nav class="topbar">
-        <div class="row">
-            <ul>
-              <li><a href="#"><span class="icon-wallet"></span> $1,500.000 <span class="icon-arrow-down"></span></a></li>
-              <li><a href="#"><span class="icon-notification"></span></a></li>
-              <li><a class="userName" id="userName" href="#"><span class="icon-profile btn-enter js--enter-modal"></span>Leonardo Dicaprio</a></li>
-		    	    <li><a href="#" id="quit"><span class="icon-quit btn-close js--quit-modal"></span></a></li>
-            </ul>
-        </div>
+        <button><span class="icon icon-wallet"></span><span class="number"> $1,500.00</span><span class="icon icon-arrow-down"></span></button>
+        <button><span class="icon icon-notification"></span></button>
+        <button id="userName"><span class="icon icon-profile"></span>Leonardo Dicaprio</button>
+        <button><span class="icon icon-quit"></span></button>
       </nav>
     </header>
 
@@ -65,8 +61,21 @@
     <div class="overlay" id="overlay">
       <div class="modal" id="myModal">
         <div class="btn-close js--close-modal">x</div>
-        <p>witaj w modalu</p>
-        <button class="js--close-modal">okay</button>
+        <div class="title">
+          <h1>login</h1>
+        </div>  
+          <div class="row">
+            <div class="col-md-4">
+              <form><input type="text" name="name" placeholder="login name"></form>
+            </div>
+            <div class="col-md-4">
+              <form><input type="password" name="password" placeholder="password"></form>
+            </div>
+            <div class="col-md-4">
+              <form><input type="submit" value="Enter"></form>
+            </div>
+          </div>
+          <button class="js--close-modal">Quit</button>
       </div>
     </div>
 

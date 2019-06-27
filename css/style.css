@@ -1041,32 +1041,34 @@ header {
   z-index: 1;
 }
 
-header .topbar .row {
-  display: flex;
-}
-
-header .topbar .row ul {
+header .topbar {
   display: flex;
   justify-content: flex-end;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
   background-color: #ffffff;
-  list-style-type: none;
+  border-bottom: 1px solid #bababa;
 }
 
-header .topbar .row ul li {
-  padding: 20px 15px;
-  color: #bababa;
-  font-size: 15px;
-  text-decoration: none;
+header .topbar button {
+  display: inline-flex;
+  background-color: #ffffff;
+  border: none;
   border-left: 1px solid #bababa;
+  padding: 20px 0;
 }
 
-header .topbar .row ul li .userName {
-  color: #56819F;
+header .topbar button .icon {
+  color: #979797;
+  padding: 0 20px;
 }
 
-header .topbar .row ul li a {
-  color: #bababa;
-  text-decoration: none;
+header .topbar button .number {
+  font-family: "Roboto", sans-serif;
+  color: #979797;
+  font-size: 20px;
 }
 
 @media (max-width: 767px) {
@@ -1090,32 +1092,24 @@ header .topbar .row ul li a {
   display: none;
 }
 
-.overlay .show {
+.overlay.show {
   display: flex;
 }
 
-.overlay::webkit-scrollbar {
+.overlay::-webkit-scrollbar {
   display: none;
 }
 
-.overlay .modal {
+.modal {
   max-width: 600px;
   margin: auto;
-  background-color: #ffffff;
+  background: #ffffff;
   position: relative;
-  padding: 30px;
-  display: none;
 }
 
-.overlay .modal .show {
-  display: block;
-}
-
-.overlay .modal .btn-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 5px 10px;
+.modal .close {
+  float: right;
+  padding: 10px;
 }
 
 .content {

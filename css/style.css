@@ -1204,6 +1204,11 @@ header .topbar button .number {
   border-bottom: 1px solid #bababa;
 }
 
+.scroll-wrapper table tr:hover {
+  background: #e3e3e3;
+  cursor: pointer;
+}
+
 .scroll-wrapper table tr th {
   padding: 20px;
 }
@@ -1216,11 +1221,6 @@ header .topbar button .number {
 
 .scroll-wrapper table tr td {
   padding: 20px;
-}
-
-.scroll-wrapper table .hover:hover {
-  background: #e3e3e3;
-  cursor: pointer;
 }
 
 .center {
@@ -1312,26 +1312,26 @@ header .topbar button .number {
   border-bottom: 1px solid #bababa;
 }
 
+.banners .banner-area .banner-style .icon, .banners .banner-area .banner-style-top .icon {
+  padding-left: 20px;
+  display: none;
+}
+
+.banners .banner-area .banner-style .icon-links, .banners .banner-area .banner-style-top .icon-links {
+  color: #F58220;
+}
+
 .banners .banner-area .banner-style:hover, .banners .banner-area .banner-style-top:hover {
   background-color: #e3e3e3;
   cursor: pointer;
 }
 
-.banners .banner-area .banner-style:hover .icon-layer, .banners .banner-area .banner-style-top:hover .icon-layer {
-  display: block;
+.banners .banner-area .banner-style:hover .icon, .banners .banner-area .banner-style-top:hover .icon {
+  display: inline-block;
 }
 
 .banners .banner-area .banner-style-top {
   border-top: 1px solid #bababa;
-}
-
-.banners .banner-area .icon-layer {
-  display: none;
-}
-
-.banners .banner-area .icon-layer .icon-links {
-  padding-right: 15px;
-  color: #F58220;
 }
 
 .section {

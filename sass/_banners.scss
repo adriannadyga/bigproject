@@ -13,24 +13,24 @@
         .banner-style {
             padding: 20px;
             border-bottom: 1px solid $grey2;
+            .icon {
+                padding-left: 20px;
+                display: none;
+            }
+            .icon-links {
+                color: $orange;
+            }
             &:hover {
                 background-color: $grey3;
                 cursor: pointer;
+                .icon {
+                    display: inline-block;
+                }
             }
-            &:hover .icon-layer {
-                display: block;
-        }
         }
         .banner-style-top {
             @extend .banner-style;
             border-top: 1px solid $grey2;
-        }
-        .icon-layer {
-            display: none;
-            .icon-links {
-                padding-right: 15px;
-                color: $orange;
-            }
         }
     }
 }

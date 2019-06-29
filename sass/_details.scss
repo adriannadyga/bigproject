@@ -9,6 +9,10 @@
         text-align: justify;
         tr {
             border-bottom: 1px solid $grey2;
+            &:hover {
+                background: $grey3;
+                cursor: pointer;
+            }
             th {
                 @extend h2;
                 padding: 20px;
@@ -20,12 +24,6 @@
             }
             td {
                 padding: 20px;
-            }
-        }
-        .hover {
-            &:hover {
-                background: $grey3;
-                cursor: pointer;
             }
         }
     }

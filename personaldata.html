@@ -7,21 +7,22 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">  
     </head>
     <body>
+        <!--  Topbar -->
         <header>
             <nav class="topbar">
-                <nav class="topbar">
-                    <button><span class="icon icon-wallet"></span><span class="number"> $1,500.00</span><span class="icon icon-arrow-down"></span></button>
-                    <button><span class="icon icon-notification"></span></button>
-                    <button><span class="icon icon-profile"></span>Leonardo Dicaprio</button>
-                    <button><span class="icon icon-quit"></span></button>
-                </nav>
+                <button><span class="icon icon-wallet"></span><span class="number"> $1,500.00</span><span class="icon icon-arrow-down"></span></button>
+                <button><span class="icon icon-notification"></span></button>
+                <button class="trigger" id="userName"><span class="icon icon-profile"></span>Leonardo Dicaprio</button>
+                <button><span class="icon icon-quit"></span></button>
             </nav>
         </header>
-        <div class="sidebar" id="sidebar">
+  
+      <!--  Sidebar -->
+        <div class="sidebar" id="myDIV">
             <nav class="sidebar-menu">
                 <div class="logo">
                     <img class="logo_img" src="images/logo.png" alt="logo">
-                    <a href="#" class="hamburger-btn" id="menu"><i class="fas fa-bars fa-2x"></i></a>  
+                    <button onclick="myFunction()" class="hamburger-btn"><i class="fas fa-bars fa-2x"></i></button>  
                 </div>
                 <div class="menu-bookmarks">
                     <ul>
@@ -29,7 +30,7 @@
                         <li><a href="details.html"><span class="icon-details"></span>Details</a></li>
                         <li><a href="links.html"><span class="icon-links"></span>Links</a></li>
                         <li><a href="banners.html"><span class="icon-banners"></span>Banners</a></li>
-                        <li><a href="#"><span class="icon-personaldata"></span>Personal data</a></li>
+                        <li><a href="personaldata.html"><span class="icon-personaldata"></span>Personal data</a></li>
                         <li><a href="payout.html"><span class="icon-payout"></span>Payout</a></li>          
                         <li><a href="#"><span class="icon-postback"></span>Postback</a></li>
                     </ul>
@@ -42,7 +43,7 @@
                             <img src="https://images.pexels.com/photos/2169434/pexels-photo-2169434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
                         </div>
                         <div class="col-md-6 left">
-                        <h5>Alina K.</h5>
+                            <h5>Alina K.</h5>
                         </div>
                     </div>
                 </div>
@@ -55,6 +56,29 @@
                 </div>
             </nav>
         </div>
+  
+      <!--  Modal -->
+        <div class="overlay" id="overlay">
+            <div class="modal" id="myModal">
+                <div class="btn-close js--close-modal">x</div>
+                <div class="title">
+                    <h1>login</h1>
+                </div>  
+                <div class="row">
+                    <div class="col-md-4">
+                        <form><input type="text" name="login" placeholder="login"></form>
+                    </div>
+                    <div class="col-md-4">
+                        <form><input type="password" name="password" placeholder="password"></form>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="orange">Enter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Personal data-->
         <div class="container">
             <div class="content">
                 <div class="title">
@@ -158,5 +182,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

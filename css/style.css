@@ -931,6 +931,7 @@ body {
 }
 
 .sidebar .sidebar-menu .logo .hamburger-btn {
+  display: none;
   color: #ffffff;
   background: #000000;
   border: none;
@@ -1012,6 +1013,9 @@ body {
 @media (max-width: 767px) {
   .sidebar {
     left: -150px;
+  }
+  .sidebar .sidebar-menu .logo .hamburger-btn {
+    display: flex;
   }
   .sidebar .sidebar-menu .menu-bookmarks ul li:hover {
     color: none;

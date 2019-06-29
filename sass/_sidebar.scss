@@ -12,6 +12,7 @@
             display: flex;
             justify-content: space-around;
             .hamburger-btn {
+                display: none;
                 color: $white;
                 background: $black;
                 border: none;
@@ -89,6 +90,11 @@
     .sidebar {
         left: -150px;
         .sidebar-menu {
+            .logo {
+                .hamburger-btn {
+                    display: flex;
+                }
+            }
             .menu-bookmarks {
                 ul {
                     li {
